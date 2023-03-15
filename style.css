@@ -1,0 +1,165 @@
+
+    body{
+        background: url("photo1.jpg"); 
+        background-size: cover; 
+        background-repeat: no-repeat; 
+       
+    } 
+    .navbar{
+        background-color:#777;
+   
+   
+    }
+    .button{
+        border-radius: 4px; 
+        color: #777 ; 
+        background-color: rgba(255, 255, 255, 0.44);
+        border: none;
+    } 
+    .glow-on-hover {
+        width: 220px;
+        height: 50px;
+        border: none;
+        outline: none;
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.44);;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+    }
+    
+    .glow-on-hover:before {
+        content: '';
+        background: linear-gradient(50deg, #735858, #7e746d, #504f41, #3f433d, #0f1111, #21232c, #57525d, #7b6e78, #837979);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    
+    .glow-on-hover:active {
+        color: #000
+    }
+    
+    .glow-on-hover:active:after {
+        background: transparent;
+    }
+    
+    .glow-on-hover:hover:before {
+        opacity: 1;
+    }
+    
+    .glow-on-hover:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.44);
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+    
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+.cards{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    min-height: 10vh;
+    
+   
+} 
+.container{
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap;
+    padding: 40px 0 ;
+
+
+} 
+.other{
+    color:#777;
+   text-align: center;
+}
+.more{
+    background-color: rgba(255, 255, 255, 0.44);
+    margin: 10px; 
+    border-radius: 2px; 
+    color:#777;
+   
+}
+
+.container .card{
+    position: relative; 
+    width: 320px; 
+    height: 250px; 
+ background-color: rgba(255, 255, 255, 0.559);
+border-radius: 15px; 
+margin: 30px;}
+.container .card .box {
+    position: absolute; 
+    top:5px;
+    left:5px;
+    right: 5px; 
+    bottom:5px; 
+   
+    border-radius: 15px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    transform: 0.5s;
+} 
+.contain{
+   background: linear-gradient(50deg, #735858, #7e746d, #504f41, #3f433d, #0f1111, #21232c, #57525d, #7b6e78, #837979);
+}
+.container .card .box .content {
+    padding: 2px; 
+    text-align: center;
+} 
+.container .card .box .content h2{
+    
+    top: 1px; 
+   bottom: 20px;
+
+    color:#777; 
+    transition: 0.5s;
+     pointer-events:none ;
+} 
+.container .card:hover .box .content h2{
+    color: rgba(0,0,0,0.05); 
+
+}  
+.container .card .box .content h3{
+  font-size: 20px; 
+  color: #777; 
+  z-index: 1;
+  transition: 0.5s;
+
+} 
+
+.container .card:hover .box .content h3,
+.container .card:hover .box .content p{
+    color: #220707;
+}
+
+
+.box1{
+    color:#777;
+   padding-top: 20px; 
+   padding-left: 10px; 
+   font-size: 50px;
+}
